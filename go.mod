@@ -2,10 +2,7 @@ module github.com/giovannirossini/http-status-code
 
 go 1.19
 
-require (
-	github.com/gin-gonic/gin v1.8.1
-	github.com/giovannirossini/http-status-code v0.0.0-20220930142333-cbda07f29f99
-)
+require github.com/gin-gonic/gin v1.8.1
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect

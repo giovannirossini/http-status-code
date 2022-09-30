@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  api:
+    image: golang
+    volumes:
+     - $PWD:/app
+    environment:
+      - PORT=80
+    ports:
+      - 80:80
+    working_dir: /app
+    command: "go run ."
