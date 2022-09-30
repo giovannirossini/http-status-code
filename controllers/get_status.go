@@ -17,7 +17,6 @@ func GetStatus(c *gin.Context) {
 // parameter sent by the client, then returns that album as a response.
 func GetStatusById(c *gin.Context) {
 	id := c.Param("id")
-	code, err := strconv.Atoi(c.Param("id"))
 
 	// Loop over the list of albums, looking for
 	// an album whose ID value matches the parameter.
@@ -27,10 +26,7 @@ func GetStatusById(c *gin.Context) {
 			return
 		} else {
 			for _, b := range a.Codes {
-				if b.Id == code {
-					if err != nil {
-						print(err)
-					}
+				if b.Id == id {
 					c.IndentedJSON(http.StatusOK, b)
 					return
 				}
