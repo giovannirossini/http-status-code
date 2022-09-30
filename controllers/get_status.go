@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/giovannirossini/models"
+	"github.com/giovannirossini/http-status-code/models"
 )
 
 // getStatus responds with the list of all albums as JSON.
