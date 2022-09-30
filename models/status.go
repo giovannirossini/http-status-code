@@ -7,16 +7,18 @@ type httpStatus struct {
 }
 
 type statusCodes struct {
-	Id          string    `json:"id"`
+	Id          string `json:"id"`
 	Description string `json:"description"`
 }
 
+// code1xx represents data about a HTTP status code starting with one hundred.
 var code1xx = []statusCodes{
 	{Id: "100", Description: "Continue"},
 	{Id: "101", Description: "Switching Protocols"},
 	{Id: "102", Description: "Processing"},
 }
 
+// code2xx represents data about a HTTP status code starting with two hundred.
 var code2xx = []statusCodes{
 	{Id: "201", Description: "Created"},
 	{Id: "202", Description: "Accepted"},
@@ -29,6 +31,7 @@ var code2xx = []statusCodes{
 	{Id: "226", Description: "IM Used"},
 }
 
+// code3xx represents data about a HTTP status code starting with three hundred.
 var code3xx = []statusCodes{
 	{Id: "300", Description: "Multiple Choices"},
 	{Id: "301", Description: "Moved Permanently"},
@@ -40,6 +43,7 @@ var code3xx = []statusCodes{
 	{Id: "308", Description: "Permanent Redirect"},
 }
 
+// code4xx represents data about a HTTP status code starting with four hundred.
 var code4xx = []statusCodes{
 	{Id: "400", Description: "Bad Request"},
 	{Id: "401", Description: "Unauthorized"},
@@ -73,6 +77,7 @@ var code4xx = []statusCodes{
 	{Id: "499", Description: "Client Closed Request"},
 }
 
+// code5xx represents data about a HTTP status code starting with five hundred.
 var code5xx = []statusCodes{
 	{Id: "500", Description: "Internal Server Error"},
 	{Id: "501", Description: "Not Implemented"},
@@ -88,6 +93,7 @@ var code5xx = []statusCodes{
 	{Id: "599", Description: "Network Connect Timeout Error"},
 }
 
+// HttpStatusCodes represents data about all HTTP status code.
 var HttpStatusCodes = []httpStatus{
 	{Id: "1xx", Description: "Informational", Codes: code1xx},
 	{Id: "2xx", Description: "Success", Codes: code2xx},
