@@ -1,0 +1,11 @@
+[metadata.heroku]
+  root-package = "github.com/giovannirossini/http-status-code"
+  install = "."
+
+[[constraint]]
+  name = "github.com/gin-gonic/gin"
+  version = "1.8.1"
+
+[prune]
+  go-tests = true
+  unused-packages = true
